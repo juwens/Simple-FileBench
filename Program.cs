@@ -12,15 +12,20 @@ namespace FileIoBench
             {
                 randomTexts.Add(Guid.NewGuid().ToString());
             }
-            string benchDir = "d:\\tmp\\io_bench";
+            string benchDir = "c:\\tmp\\io_bench";
 
-            for (int i = 0; i < 100; i++)
+            List<double> measurements = new();
+            for (int i = 0; i < 20; i++)
             {
-                NewMethod(randomTexts, benchDir);
+                var took = NewMethod(randomTexts, benchDir);
+                measurements.Add(took.TotalSeconds);
             }
+
+            Console.WriteLine($"mean: {measurements.Average():0.00} s");
+            Console.WriteLine($"median: {measurements.Order().Skip(measurements.Count/2).First():0.00} s");
         }
 
-        private static void NewMethod(List<string> randomTexts, string benchDir)
+        private static TimeSpan NewMethod(List<string> randomTexts, string benchDir)
         {
             if (Directory.Exists(benchDir))
             {
@@ -43,6 +48,8 @@ namespace FileIoBench
 
             sw.Stop();
             Console.WriteLine($"{sw.Elapsed.TotalSeconds} s");
+
+            return sw.Elapsed;
         }
     }
 }
