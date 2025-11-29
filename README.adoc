@@ -2,6 +2,8 @@
 
 === Win 11 Desktop with MS Defender Antivirus
 
+- i5 13600K
+
 ```
 warmup 00: write 0,21 s, read: 0,275 s, total: 0,48
 warmup 01: write 0,16 s, read: 0,030 s, total: 0,19
