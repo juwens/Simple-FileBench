@@ -14,18 +14,31 @@ namespace FileIoBench
             }
             string benchDir = "c:\\tmp\\io_bench";
 
+            // warmup
+            for (int i = 0; i < 3; i++)
+            {
+                var took = RunBench(randomTexts, benchDir);
+                Print("warmup", i, took);
+            }
+
             List<double> measurements = new();
             for (int i = 0; i < 20; i++)
             {
-                var took = NewMethod(randomTexts, benchDir);
-                measurements.Add(took.TotalSeconds);
+                var took = RunBench(randomTexts, benchDir);
+                Print("run", i, took);
+                measurements.Add(took.Read.TotalSeconds + took.Write.TotalSeconds);
             }
 
             Console.WriteLine($"mean: {measurements.Average():0.00} s");
             Console.WriteLine($"median: {measurements.Order().Skip(measurements.Count/2).First():0.00} s");
         }
 
-        private static TimeSpan NewMethod(List<string> randomTexts, string benchDir)
+        private static void Print(string label, int i, (TimeSpan Write, TimeSpan Read) took)
+        {
+            Console.WriteLine($"{label} {i:00}: write {took.Write.TotalSeconds:f2} s, read: {took.Read.TotalSeconds:f3} s, total: {took.Write.TotalSeconds + took.Read.TotalSeconds:f2} s");
+        }
+
+        private static (TimeSpan Write, TimeSpan Read) RunBench(List<string> randomTexts, string benchDir)
         {
             if (Directory.Exists(benchDir))
             {
@@ -34,22 +47,22 @@ namespace FileIoBench
 
             Directory.CreateDirectory(benchDir);
 
-            var sw = Stopwatch.StartNew();
+            var swWrite = Stopwatch.StartNew();
             for (int i = 0; i < randomTexts.Count; i++)
             {
                 File.WriteAllText($"{benchDir}\\file_{i}.txt", randomTexts[i]);
             }
+            swWrite.Stop();
 
+            var swRead = Stopwatch.StartNew();
             int sum = 0;
             foreach (var file in Directory.GetFiles(benchDir))
             {
                 sum += File.ReadAllText(file).Length; // prevent compiler to optimize it away
             }
+            swRead.Stop();
 
-            sw.Stop();
-            Console.WriteLine($"{sw.Elapsed.TotalSeconds} s");
-
-            return sw.Elapsed;
+            return (swWrite.Elapsed, swRead.Elapsed);
         }
     }
 }
