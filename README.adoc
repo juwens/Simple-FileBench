@@ -29,3 +29,33 @@ run 19: write 0,36 s, read: 0,073 s, total: 0,44
 mean: 0,21 s
 median: 0,19 s
 ```
+
+=== Cursed Dell 13th Gen i9 Laptop 
+
+```
+warmup 00: write 3,59 s, read: 0,179 s, total: 3,77 s
+warmup 01: write 3,64 s, read: 0,226 s, total: 3,87 s
+warmup 02: write 3,47 s, read: 0,119 s, total: 3,59 s
+run 00: write 4,06 s, read: 0,112 s, total: 4,17 s
+run 01: write 3,59 s, read: 0,114 s, total: 3,71 s
+run 02: write 3,76 s, read: 0,113 s, total: 3,87 s
+run 03: write 5,85 s, read: 0,116 s, total: 5,97 s
+run 04: write 3,61 s, read: 0,137 s, total: 3,74 s
+run 05: write 3,70 s, read: 0,122 s, total: 3,82 s
+run 06: write 4,05 s, read: 0,131 s, total: 4,18 s
+run 07: write 3,81 s, read: 0,113 s, total: 3,92 s
+run 08: write 4,26 s, read: 0,113 s, total: 4,37 s
+run 09: write 4,14 s, read: 0,116 s, total: 4,26 s
+run 10: write 3,98 s, read: 0,122 s, total: 4,11 s
+run 11: write 4,13 s, read: 0,199 s, total: 4,33 s
+run 12: write 4,30 s, read: 0,152 s, total: 4,45 s
+run 13: write 4,07 s, read: 0,160 s, total: 4,23 s
+run 14: write 4,20 s, read: 0,122 s, total: 4,32 s
+run 15: write 4,63 s, read: 0,120 s, total: 4,75 s
+run 16: write 4,16 s, read: 0,115 s, total: 4,27 s
+run 17: write 4,13 s, read: 0,160 s, total: 4,29 s
+run 18: write 5,52 s, read: 0,145 s, total: 5,67 s
+run 19: write 4,48 s, read: 0,230 s, total: 4,71 s
+mean: 4,36 s
+median: 4,27 s
+```
