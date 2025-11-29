@@ -1,6 +1,6 @@
 == Results
 
-=== Win 11 Desktop
+=== Win 11 Desktop with MS Defender Antivirus
 
 ```
 warmup 00: write 0,21 s, read: 0,275 s, total: 0,48
@@ -30,7 +30,7 @@ mean: 0,21 s
 median: 0,19 s
 ```
 
-=== Cursed Dell 13th Gen i9 Laptop 
+=== Cursed Dell 13th Gen i9 Laptop with BitDefener
 
 ```
 warmup 00: write 3,59 s, read: 0,179 s, total: 3,77 s
