@@ -63,5 +63,29 @@ median: 4,27 s
 ```
 
 ```
-
+warmup 00: write 0,92 s, read: 4,627 s, total: 5,54 s
+warmup 01: write 0,87 s, read: 1,303 s, total: 2,17 s
+warmup 02: write 0,75 s, read: 1,278 s, total: 2,03 s
+run 00: write 0,77 s, read: 1,254 s, total: 2,02 s
+run 01: write 0,75 s, read: 1,281 s, total: 2,03 s
+run 02: write 0,72 s, read: 1,296 s, total: 2,02 s
+run 03: write 0,72 s, read: 1,307 s, total: 2,02 s
+run 04: write 0,68 s, read: 1,330 s, total: 2,01 s
+run 05: write 0,77 s, read: 1,281 s, total: 2,06 s
+run 06: write 0,75 s, read: 1,288 s, total: 2,04 s
+run 07: write 0,78 s, read: 1,307 s, total: 2,09 s
+run 08: write 0,80 s, read: 1,222 s, total: 2,03 s
+run 09: write 0,74 s, read: 1,274 s, total: 2,01 s
+run 10: write 0,95 s, read: 1,062 s, total: 2,01 s
+run 11: write 0,75 s, read: 1,265 s, total: 2,02 s
+run 12: write 0,70 s, read: 1,321 s, total: 2,02 s
+run 13: write 0,74 s, read: 1,270 s, total: 2,01 s
+run 14: write 0,69 s, read: 1,301 s, total: 1,99 s
+run 15: write 0,74 s, read: 1,271 s, total: 2,01 s
+run 16: write 0,77 s, read: 1,263 s, total: 2,03 s
+run 17: write 0,83 s, read: 1,176 s, total: 2,01 s
+run 18: write 0,76 s, read: 1,239 s, total: 2,00 s
+run 19: write 0,79 s, read: 1,227 s, total: 2,02 s
+mean: 2,02 s
+median: 2,02 s
 ```
