@@ -65,6 +65,7 @@ median: 4,27 s
 === Thinkpad X220 @ 2.5GHz (2C 4T) anno 2012
 
 - Windows 10 22H2
+- Antivirus:  MS Defender
 - bottleneck: CPU 100%
 
 ```
