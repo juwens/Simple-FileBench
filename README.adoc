@@ -1,3 +1,5 @@
+:toc:
+
 == Results
 
 === Win 11 Desktop with MS Defender Antivirus
